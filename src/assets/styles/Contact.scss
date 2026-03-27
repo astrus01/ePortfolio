@@ -18,8 +18,13 @@
     color: white;
   }
 
-  fieldset {
-    background-color: white;
+  .MuiOutlinedInput-root {
+      background-color: rgb(255, 255, 255); /* A nice subtle transparency */
+
+      /* Make sure the text is visible */
+      input, textarea {
+        color: rgb(0, 0, 0) !important;
+      }
   }
 }
 

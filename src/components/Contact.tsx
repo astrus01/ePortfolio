@@ -1,10 +1,12 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
+
+emailjs.init('6v5K1nKED3i0hpfZP');
 
 function Contact() {
 
@@ -25,28 +27,30 @@ function Contact() {
     setEmailError(email === '');
     setMessageError(message === '');
 
-    /* Uncomment below if you want to enable the emailJS */
+    if (name !== '' && email !== '' && message !== '') {
+      const serviceID = 'service_0vx2oel';
+      const templateID = 'template_n2nvbyq';
+      const templateParams = {
+        name: name,
+        email: email,
+        message: message
+      };
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+      console.log(templateParams);
+      emailjs.send(serviceID, templateID, templateParams).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          console.log('FAILED...', error);
+          alert("Message failed to send.");
+        },
+      );
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
 
   return (
@@ -61,11 +65,13 @@ function Contact() {
             noValidate
             autoComplete="off"
             className='contact-form'
+            sx={{ position: 'relative', zIndex: 10 }} /* Force the form to the front */
           >
             <div className='form-flex'>
               <TextField
                 required
-                id="outlined-required"
+                variant="outlined"
+                id="name-input"
                 label="Your Name"
                 placeholder="What's your name?"
                 value={name}
@@ -74,10 +80,16 @@ function Contact() {
                 }}
                 error={nameError}
                 helperText={nameError ? "Please enter your name" : ""}
+                sx={{
+                  zIndex: 20,
+                  pointerEvents: 'auto',
+                  input: { color: 'var(--text-color, #ffffff)' } /* Ensure text is visible */
+                }}
               />
               <TextField
                 required
-                id="outlined-required"
+                variant="outlined"
+                id="email-input"
                 label="Email / Phone"
                 placeholder="How can I reach you?"
                 value={email}
@@ -86,11 +98,17 @@ function Contact() {
                 }}
                 error={emailError}
                 helperText={emailError ? "Please enter your email or phone number" : ""}
+                sx={{
+                  zIndex: 20,
+                  pointerEvents: 'auto',
+                  input: { color: 'var(--text-color, #ffffff)' }
+                }}
               />
             </div>
             <TextField
               required
-              id="outlined-multiline-static"
+              variant="outlined"
+              id="message-input" /* Ensure this ID is unique too */
               label="Message"
               placeholder="Send me any inquiries or questions"
               multiline
@@ -102,8 +120,18 @@ function Contact() {
               }}
               error={messageError}
               helperText={messageError ? "Please enter the message" : ""}
+              sx={{
+                zIndex: 20,
+                pointerEvents: 'auto',
+                textarea: { color: 'var(--text-color, #ffffff)' }
+              }}
             />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
+            <Button
+              variant="contained"
+              endIcon={<SendIcon />}
+              onClick={sendEmail}
+              sx={{ zIndex: 20, pointerEvents: 'auto' }}
+            >
               Send
             </Button>
           </Box>
