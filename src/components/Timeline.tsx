@@ -11,7 +11,7 @@ function Timeline() {
     <div id="goals">
       <div className="items-container">
         <h1>Career Goals & ECE Roadmap</h1>
-        <p style={{color: 'white', textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto'}}>
+        <p className="roadmap-description" style={{textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto'}}>
           My long-term career aspiration is to lead systems integration for advanced autonomous robotics.
           Rather than focusing strictly on traditional circuit design, my roadmap is heavily tailored toward
           mechatronics—blending mechanical structures, custom PCBs, and intelligent control software.

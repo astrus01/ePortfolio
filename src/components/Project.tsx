@@ -1,11 +1,20 @@
 import React from "react";
-import AltiumImage from '../assets/images/Altium.png';
-import RoverImage from '../assets/images/Rover.jpg';
-import BattlebotImage from '../assets/images/Battlebot.jpg';
-import FadeIn from './FadeIn'; // Animation import
+import FadeIn from './FadeIn';
 import Button from '@mui/material/Button';
 import LanguageIcon from '@mui/icons-material/Language';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+
+// *** MEDIA IMPORTS ***
+import WiringDiagram from '../assets/images/wiringdiagram.jpg';
+import SolderedComponents from '../assets/images/solderedcomponents.jpg';
+import SolderedCorner from '../assets/images/solderedledcorner.jpg';
+import ArduinoCode from '../assets/images/arduinofastled.png';
+import HyperionSettings from '../assets/images/hyperionsettings.png';
+import LedOnBack from '../assets/images/ledputonthebackofmonitor.jpg';
+
+import AltiumImage from '../assets/images/Altium.png';
+import RoverImage from '../assets/images/rover.jpg';
+
 import '../assets/styles/Project.scss';
 
 function Project() {
@@ -15,43 +24,70 @@ function Project() {
         <FadeIn transitionDuration={800} delay={200}>
             <div className="projects-grid">
 
-                {/* DISCOVERY PROJECT FEATURE */}
-                <div className="project" style={{ gridColumn: "1 / -1" }}>
-                    <img src={AltiumImage} className="zoom" alt="Altium Rigid-Flex PCB Design" width="100%"/>
-                    <h2>Discovery Project: Wearable Haptics (VIP: Mechatronics and Motivation)</h2>
-                    <div style={{ textAlign: "left", padding: "15px" }}>
-                    <p><strong>Overview:</strong> As an Undergraduate Researcher in the "Mechatronics and Motivation" Vertically Integrated Projects (VIP) group at the Georgia Institute of Technology, I am currently working on a complex initiative to condense advanced wearable haptic technology into an incredibly compact ring form factor. This endeavor serves as my primary ECE 1100 Discovery Project, representing a deep dive into the practical, real-world applications of electrical engineering combined with stringent mechanical constraints. It bridges the gap between theoretical circuit analysis and physical product design.</p>
+                {/* --- DISCOVERY PROJECT FEATURE --- */}
+                <div className="project discovery-feature" style={{ gridColumn: "1 / -1", paddingBottom: "20px" }}>
 
-                    <p><strong>The Challenge:</strong> Traditional haptic feedback devices are notoriously bulky, often relying on rigid printed circuit boards (PCBs) and large actuators that severely limit user mobility and comfort. The primary objective of our research is to miniaturize this technology so it can be worn unobtrusively on the finger. This requires a significant departure from standard FR4 boards, pushing us to utilize flexible electronics that can seamlessly curve around the human body. The core challenge lies in achieving this flexibility without compromising structural integrity, electrical connectivity, or signal fidelity during continuous physical movement.</p>
+                    <h2 style={{ marginBottom: '20px', paddingTop: '10px' }}>Discovery Project: Adaptive Screen Backlighting (Ambilight)</h2>
 
-                    <p><strong>Technical Execution & PCB Design:</strong> My central contribution to the research group revolves around the architectural layout and routing of a rigid-flex PCB using Altium Designer. Designing a rigid-flex board introduces a myriad of layout challenges compared to standard two-layer static designs. Because the board must physically bend to form the ring geometry, component placement and trace routing must be flawlessly executed to prevent stress fractures in the copper layers during operation.</p>
+                    <video
+                        className="zoom"
+                        controls
+                        autoPlay
+                        loop
+                        muted
+                        style={{ width: '100%', maxWidth: '700px', display: 'block', margin: '0 auto 20px auto', borderRadius: '8px', backgroundColor: 'black' }}
+                    >
+                        <source src={process.env.PUBLIC_URL + '/final_workingledmonitortest.mov'} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
 
-                    <p>To ensure high reliability and manufacturability within our tightly constrained spatial footprint, I implemented strict, customized design rules. I utilized trace widths of precisely 0.15mm for standard signal routing and bumped the width to 0.2mm for power delivery lines, perfectly balancing impedance requirements with extreme physical space limitations. Furthermore, managing the layer transitions across the flex zones required meticulous via configurations. I standardized the via sizes across the board to 0.4mm with a 0.15mm hole size, deliberately coupled with a -0.4mm solder mask expansion. This exact specification prevents accidental solder bridging and ensures clean manufacturing tolerances during fabrication.</p>
+                    <div className="project-description-detailed" style={{ textAlign: "left", padding: "0 20px", lineHeight: "1.8" }}>
 
-                    <p>One of the more complex aspects of the layout involved rigorous footprint management. For instance, ensuring that the main processing unit—footprint U1A—was correctly positioned required careful spatial planning. It had to be placed entirely on the rigid section of the board, remaining completely clear of the flexible bending zones to prevent mechanical failure of the solder joints. Additionally, peripheral components like connector J1 required active management; I ensured it was routed efficiently and moved entirely out of the way to prevent any spatial collisions with the primary ICs.</p>
+                        <p><strong>Overview:</strong> For my ECE 1100 Discovery Project, I engineered a custom, open-source dynamic ambient backlighting system (commonly known as Ambilight). The system analyzes on-screen video data in real time and projects matching colors onto the wall behind the monitor using addressable LED strips. The goal was to extend the perceived field of view, decrease eyestrain during prolonged viewing in dark environments, and create a deeper sense of immersion in cinematic or gaming content.</p>
 
-                    <p><strong>Impact & Significance:</strong> This project is a foundational stepping stone for my overarching career goals. While my background is in electrical engineering, my passion leans heavily away from traditional circuit tech and squarely into mechatronics and robotics, which I plan to pursue through my advanced thread options. By successfully prototyping a highly specialized rigid-flex design, our group aims to definitively demonstrate that high-fidelity haptic feedback can be seamlessly integrated into daily wear. For future employers, this project acts as a testament to my ability to operate at the complex intersection of electrical design and mechanical form, taking a theoretical concept from a schematic to a highly specialized, manufacturable physical prototype.</p>
-</div>
+                        <p><strong>The Engineering Challenge:</strong> While conceptually straightforward, implementing a low-latency Ambilight requires solving substantial hardware and software integration challenges. The system cannot simply display colors; it must process dominant color data across specialized "zones" of the screen and update up to 100+ individual LEDs sixty times per second to maintain perceptual synchronization with the video. Any lag beyond approximately 20 milliseconds breaks the immersion and becomes distracting. My project required a full-stack engineering approach: managing high-current power distribution, establishing reliable serial communication between a PC and a microcontroller, and optimizing color-processing firmware.</p>
+
+                        <div className="hardware-gallery" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '15px', margin: '25px 0' }}>
+                            <img src={WiringDiagram} alt="Wiring Diagram" style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }} />
+                            <img src={SolderedComponents} alt="Soldered Components" style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }} />
+                            <img src={SolderedCorner} alt="Soldered LED Corner" style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }} />
+                            <img src={ArduinoCode} alt="Arduino FastLED Code" style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }} />
+                            <img src={HyperionSettings} alt="Hyperion Configuration" style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }} />
+                            <img src={LedOnBack} alt="LEDs Mounted on Monitor" style={{ width: '100%', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }} />
+                        </div>
+
+                        <p><strong>Hardware Architecture:</strong> The backbone of the system is a high-density strip of WS2812B individually addressable 5V LEDs. The strip is controlled by an Arduino micro-controller which interprets color data received via USB serial. One of the key hardware challenges was power; a dense strip can draw significant current at full brightness. I engineered a dedicated 5V power supply rail and hand-soldered the power distribution. To ensure system stability, I integrated a smoothing capacitor across the power rails. While not strictly mandatory, this capacitor acts as a crucial signal filter against electrical disturbances originating from the power supply and the LED strip, preventing anomalous and erratic behaviors in the Arduino logic. Currently, the soldered control components are securely mounted directly behind the monitor, with a planned future upgrade to design and integrate a custom 3D-printed electronics enclosure.</p>
+
+                        <p><strong>Software & Optimization:</strong> The Arduino firmware relies on the FastLED library, allowing for rapid-fire, low-level protocol updates to the WS2812B data line. On the PC side, I utilized Hyperion screen capture software to sample the screen data and pack it into an optimized serial data packet. A major focus was system optimization; the Hyperion software runs incredibly efficiently in the background, consuming only about 2 to 4 percent of my GPU resources and roughly 200MB of RAM. To achieve fluid, cinematic color transitions without jarring flashes, I configured the software to utilize linear smoothing at 120Hz with a 100ms update window, finding the perfect balance between real-time color responsiveness and viewing comfort.</p>
+
+                        <p><strong>Behind the Monitor View:</strong></p>
+                        <video
+                            width="100%"
+                            controls
+                            style={{ maxWidth: '700px', display: 'block', margin: '10px auto', borderRadius: '8px', backgroundColor: 'black' }}
+                        >
+                            <source src={process.env.PUBLIC_URL + '/ledbehindmonitorview.mov'} type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <p style={{ marginTop: '20px' }}><strong>Impact & Significance:</strong> Completing this project demonstrated mastery over several core ECE thread concepts: embedded firmware development (C++), high-current DC power regulation, and high-speed digital serial communication. It forced me to move beyond theoretical Arduino examples and confront real-world engineering constraints such as signal integrity on long data lines and voltage drop management over high-current traces. This project stands as a testament to my ability to synthesize hardware design requirements with optimized software control systems to deliver a polished, functional consumer electronics prototype.</p>
+                    </div>
                 </div>
 
-                {/* HACKATHON PROJECT */}
+                {/* --- OTHER PROJECTS --- */}
+
+                <div className="project">
+                    <img src={AltiumImage} className="zoom" alt="Altium Rigid-Flex PCB" width="100%"/>
+                    <h2>Wearable Haptics (VIP: Mechatronics & Motivation)</h2>
+                    <p>Designed a rigid-flex printed circuit board (PCB) using Altium Designer to condense complex wearable haptic technology into a compact ring form factor. Implemented strict trace width constraints (0.15mm standard, 0.2mm power) and optimized via placements to balance impedance requirements with extreme physical space limitations.</p>
+                </div>
+
                 <div className="project">
                     <img src={RoverImage} className="zoom" alt="Quakey Lunar Rover" width="100%"/>
                     <h2>"Quakey" Lunar Rover (GT IEEE RoboTech)</h2>
-                    <p>Won 1st Place Overall and 1st in the Autonomous Track at the Jan 2026 RoboTech Hackathon. Over 36 hours, our team engineered a vision-based lunar rover. I led the design of the robotic arm and electrical systems, successfully integrating power distribution, sensor inputs, and complex motor control for mecanum wheel navigation.</p>
+                    <p>Won 1st Place Overall and 1st in the Autonomous Track at the Jan 2026 RoboTech Hackathon. Over 36 hours, our team engineered a vision-based lunar rover capable of autonomous off-road navigation, semantic classification of lunar hazards, and precise depth estimation. I led the hardware integration and robotic arm design.</p>
 
-                    {/* Embedded YouTube Player */}
-                    <div style={{ marginTop: '15px', marginBottom: '15px', position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                        <iframe
-                            src="https://www.youtube.com/embed/CpWTebDheA0"
-                            title="Quakey Robotech 2026"
-                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '8px', border: 'none' }}
-                            allowFullScreen>
-                        </iframe>
-                    </div>
-
-                    {/* Links */}
-                    <div style={{ display: 'flex', gap: '10px', marginTop: '10px', flexWrap: 'wrap' }}>
+                    <div className="links-group" style={{ display: 'flex', gap: '10px', marginTop: '10px', flexWrap: 'wrap' }}>
                         <Button variant="outlined" startIcon={<LanguageIcon />} href="https://devpost.com/software/quakey" target="_blank">
                             Devpost
                         </Button>
@@ -61,17 +97,40 @@ function Project() {
                     </div>
                 </div>
 
-                {/* BATTLEBOTS PROJECT */}
+                {/* BATTLEBOTS SECTION UPDATED */}
                 <div className="project">
-                    <img src={BattlebotImage} className="zoom" alt="3lb Combat Robot" width="100%"/>
+                    <video
+                        className="zoom"
+                        width="100%"
+                        controls
+                        style={{ borderRadius: '8px', marginBottom: '15px', backgroundColor: 'black' }}
+                    >
+                        <source src={process.env.PUBLIC_URL + '/battlebot.mov'} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                     <h2>3lb Combat Robot (RoboJackets BattleBots)</h2>
-                    <p>Designed a 3lb combat robot weapon system using Autodesk Inventor. Handled internal wiring, soldering, and optimized Electronic Speed Controller (ESC) settings for the weapon and drive motors. We successfully defended design specifications to senior engineering leads. I drove and competed against teams with our bot, "Kimchi", at the "Jacket Racket" event.</p>
+                    <p>Member of RoboJackets BattleBots team. Designed a high-kinetic-energy weapon system for a 3lb combat robot using Autodesk Inventor. Engineered the internal layout, hand-soldered power distribution leads, and optimized Electronic Speed Controller (ESC) configurations to balance acceleration with drive reliability.</p>
+
+                    {/* NEW LIVE STREAM BUTTON */}
+                    <div className="links-group" style={{ display: 'flex', gap: '10px', marginTop: '15px', flexWrap: 'wrap' }}>
+                        <Button variant="outlined" startIcon={<YouTubeIcon />} href="https://www.youtube.com/watch?v=eUpgA2VQzzo" target="_blank" color="error">
+                            Watch Live Stream
+                        </Button>
+                    </div>
                 </div>
 
-                {/* IROBOT CREATE 3 PROJECT */}
-                <div className="project">
+                <div className="project Create3">
+                    <video
+                        className="zoom"
+                        width="100%"
+                        controls
+                        style={{ borderRadius: '8px', marginBottom: '15px', backgroundColor: 'black' }}
+                    >
+                        <source src={process.env.PUBLIC_URL + '/irobotmaze.mov'} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
                     <h2>Autonomous Navigation (iRobot Create 3)</h2>
-                    <p>Developed autonomous navigation algorithms in Python for an iRobot Create 3. Programmed logic for maze-solving using flood-fill algorithms, as well as self-parking and dynamic object-following behaviors, cementing my interest in the software side of autonomous systems.</p>
+                    <p>Developed autonomous navigation algorithms in Python for an iRobot Create 3. Programmed maze-solving logic using flood-fill algorithms, path planning via A* node search, and advanced reactive behaviors including dynamic object following.</p>
                 </div>
 
             </div>

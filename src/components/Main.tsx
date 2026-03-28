@@ -18,7 +18,7 @@ function Main() {
         </div>
         <div className="content">
           <div className="social_icons">
-            <a href="https://github.com/yourgithub" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://github.com/astrus01" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/tristanlint" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
           <h1>Tristan Lint</h1>
@@ -40,7 +40,7 @@ function Main() {
           </div>
 
           <div className="mobile_social_icons">
-            <a href="https://github.com/yourgithub" target="_blank" rel="noreferrer"><GitHubIcon/></a>
+            <a href="https://github.com/astrus01" target="_blank" rel="noreferrer"><GitHubIcon/></a>
             <a href="https://www.linkedin.com/in/tristanlint" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
         </div>
