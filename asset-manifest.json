@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ePortfolio/static/css/main.51e5a96e.css",
+    "main.js": "/ePortfolio/static/js/main.af3d696d.js",
+    "static/js/453.b05d8aa5.chunk.js": "/ePortfolio/static/js/453.b05d8aa5.chunk.js",
+    "static/media/wiringdiagram.jpg": "/ePortfolio/static/media/wiringdiagram.6f528b89ece7d6e76ff8.jpg",
+    "static/media/solderedcomponents.jpg": "/ePortfolio/static/media/solderedcomponents.11b853cc7054c905564b.jpg",
+    "static/media/ledputonthebackofmonitor.jpg": "/ePortfolio/static/media/ledputonthebackofmonitor.7aa5883882c95e23ba19.jpg",
+    "static/media/solderedledcorner.jpg": "/ePortfolio/static/media/solderedledcorner.a1ca8a6fe6d9f16280a5.jpg",
+    "static/media/rover.jpg": "/ePortfolio/static/media/rover.d8c38a77cfc8e7c4f806.jpg",
+    "static/media/bg-light.png": "/ePortfolio/static/media/bg-light.bac0efb485244a522981.png",
+    "static/media/Myheadshot.jpg": "/ePortfolio/static/media/Myheadshot.83ab7f84bfb102c8c37a.jpg",
+    "static/media/bg-dark.png": "/ePortfolio/static/media/bg-dark.f420c6b8458af72de935.png",
+    "static/media/hyperionsettings.png": "/ePortfolio/static/media/hyperionsettings.7a15c903d7914d12f0af.png",
+    "static/media/arduinofastled.png": "/ePortfolio/static/media/arduinofastled.c5e6361a97be855b5180.png",
+    "static/media/Altium.png": "/ePortfolio/static/media/Altium.f0dc99b91329b3d5e91d.png",
+    "index.html": "/ePortfolio/index.html",
+    "main.51e5a96e.css.map": "/ePortfolio/static/css/main.51e5a96e.css.map",
+    "main.af3d696d.js.map": "/ePortfolio/static/js/main.af3d696d.js.map",
+    "453.b05d8aa5.chunk.js.map": "/ePortfolio/static/js/453.b05d8aa5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51e5a96e.css",
+    "static/js/main.af3d696d.js"
+  ]
+}
