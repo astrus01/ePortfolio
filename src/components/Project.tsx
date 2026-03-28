@@ -37,7 +37,7 @@ function Project() {
                         muted
                         style={{ width: '100%', maxWidth: '700px', display: 'block', margin: '0 auto 20px auto', borderRadius: '8px', backgroundColor: 'black' }}
                     >
-                        <source src={process.env.PUBLIC_URL + '/final_workingledmonitortest.mov'} type="video/mp4" />
+                        <source src={process.env.PUBLIC_URL + '/finalworkingledmonitortest.mov'} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
 
