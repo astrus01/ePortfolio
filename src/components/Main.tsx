@@ -29,8 +29,8 @@ function Main() {
             <Button
               variant="outlined"
               startIcon={<PictureAsPdfIcon />}
-              href={process.env.PUBLIC_URL + '/LintTristanResume.pdf'}
-              download="Tristan_Lint_Resume.pdf"
+              href={process.env.PUBLIC_URL + '/Lint_Resume_1100.pdf'}
+              download="Lint_Resume_1100.pdf"
               target="_blank"
               rel="noreferrer"
               sx={{ color: '#5000ca', borderColor: '#5000ca', '&:hover': { borderColor: '#3b0099', backgroundColor: 'rgba(80, 0, 202, 0.04)' } }}
