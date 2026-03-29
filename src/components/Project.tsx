@@ -37,7 +37,7 @@ function Project() {
                         muted
                         style={{ width: '100%', maxWidth: '700px', display: 'block', margin: '0 auto 20px auto', borderRadius: '8px', backgroundColor: 'black' }}
                     >
-                        <source src={process.env.PUBLIC_URL + '/ambilight_main.mov'} type="video/mp4" />
+                        <source src={process.env.PUBLIC_URL + '/ambilight_main.mp4'} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
 
@@ -69,7 +69,7 @@ function Project() {
                             muted
                             style={{ maxWidth: '700px', display: 'block', margin: '10px auto', borderRadius: '8px', backgroundColor: 'black' }}
                         >
-                            <source src={process.env.PUBLIC_URL + '/ledbehindmonitorview.mov'} type="video/mp4" />
+                            <source src={process.env.PUBLIC_URL + '/ledbehindmonitorview.mp4'} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
@@ -111,7 +111,7 @@ function Project() {
                         muted
                         style={{ borderRadius: '8px', marginBottom: '15px', backgroundColor: 'black' }}
                     >
-                        <source src={process.env.PUBLIC_URL + '/battlebot.mov'} type="video/mp4" />
+                        <source src={process.env.PUBLIC_URL + '/battlebot.mp4'} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <h2>3lb Combat Robot (RoboJackets BattleBots)</h2>
@@ -135,7 +135,7 @@ function Project() {
                         muted
                         style={{ borderRadius: '8px', marginBottom: '15px', backgroundColor: 'black' }}
                     >
-                        <source src={process.env.PUBLIC_URL + '/irobotmaze.mov'} type="video/mp4" />
+                        <source src={process.env.PUBLIC_URL + '/irobotmaze.mp4'} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                     <h2>Autonomous Navigation (iRobot Create 3)</h2>
