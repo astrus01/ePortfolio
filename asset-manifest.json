@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ePortfolio/static/css/main.005a913b.css",
-    "main.js": "/ePortfolio/static/js/main.f0dcdb04.js",
+    "main.js": "/ePortfolio/static/js/main.027fbefa.js",
     "static/js/453.b05d8aa5.chunk.js": "/ePortfolio/static/js/453.b05d8aa5.chunk.js",
     "static/media/wiringdiagram.jpg": "/ePortfolio/static/media/wiringdiagram.6f528b89ece7d6e76ff8.jpg",
     "static/media/solderedcomponents.jpg": "/ePortfolio/static/media/solderedcomponents.11b853cc7054c905564b.jpg",
@@ -16,11 +16,11 @@
     "static/media/Altium.png": "/ePortfolio/static/media/Altium.f0dc99b91329b3d5e91d.png",
     "index.html": "/ePortfolio/index.html",
     "main.005a913b.css.map": "/ePortfolio/static/css/main.005a913b.css.map",
-    "main.f0dcdb04.js.map": "/ePortfolio/static/js/main.f0dcdb04.js.map",
+    "main.027fbefa.js.map": "/ePortfolio/static/js/main.027fbefa.js.map",
     "453.b05d8aa5.chunk.js.map": "/ePortfolio/static/js/453.b05d8aa5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.005a913b.css",
-    "static/js/main.f0dcdb04.js"
+    "static/js/main.027fbefa.js"
   ]
 }
