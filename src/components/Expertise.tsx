@@ -11,14 +11,12 @@ const labelsFirst = [
     "Rigid-Flex PCBs",
     "Soldering",
     "Circuit Analysis",
-    "Multimeters & Oscilloscopes"
 ];
 
 const labelsSecond = [
     "Autodesk Inventor",
     "Onshape",
     "3D Printing",
-    "Laser Cutting",
     "Hardware Assembly",
     "Schlieren Imaging Optics"
 ];
@@ -41,7 +39,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faMicrochip} size="3x"/>
                     <h3>Hardware & PCB Design</h3>
-                    <p>Experience in designing compact, rigid-flex printed circuit boards for wearable technology, managing component footprints, and optimizing trace routing for space-constrained mechatronic applications.</p>
+                    <p>I have hands-on experience designing compact, rigid-flex printed circuit boards for wearable technology. This includes managing component footprints and optimizing trace routing for space-constrained mechatronic applications.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Core Skills:</span>
                         {labelsFirst.map((label, index) => (
@@ -53,7 +51,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faRobot} size="3x"/>
                     <h3>CAD & Prototyping</h3>
-                    <p>Proficient in 3D modeling for combat robotics and autonomous rovers. Experienced in rapid prototyping using 3D printers and laser cutters to iterate on mechanical assemblies and weapon systems.</p>
+                    <p>I'm comfortable with 3D modeling for combat robotics and other projects, and I regularly use 3D printers to rapidly iterate on mechanical assemblies and weapon systems.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Core Skills:</span>
                         {labelsSecond.map((label, index) => (
@@ -65,7 +63,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faPython} size="3x"/>
                     <h3>Programming & Autonomy</h3>
-                    <p>Developing logic for autonomous navigation, including flood-fill pathfinding and object-following behaviors. Strong foundation in Python for computing and algorithmic problem-solving.</p>
+                    <p>I develop logic for autonomous navigation, including flood-fill pathfinding and object-following behaviors. Most of my programming work is in Python, applied to computing and algorithmic problem-solving.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Core Skills:</span>
                         {labelsThird.map((label, index) => (

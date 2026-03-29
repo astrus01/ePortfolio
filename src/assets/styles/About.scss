@@ -1,0 +1,18 @@
+/* --- Base Desktop Styling (Perfectly matches Skills) --- */
+.about-container {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* --- Mobile Breakpoint (Perfectly matches Skills) --- */
+@media screen {
+    @media (max-width: 768px) {
+        .about-container {
+            display: block;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    }
+}

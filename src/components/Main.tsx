@@ -22,7 +22,7 @@ function Main() {
             <a href="https://www.linkedin.com/in/tristanlint" target="_blank" rel="noreferrer"><LinkedInIcon/></a>
           </div>
           <h1>Tristan Lint</h1>
-          <p>Electrical Engineering Student | Robotics & Autonomous Systems</p>
+          <p>Electrical Engineering | Georgia Tech</p>
 
           {/* ECE Rubric Requirement: Easy to view/download Resume */}
           <div className="resume-button" style={{ marginTop: '20px' }}>

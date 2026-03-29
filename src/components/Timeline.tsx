@@ -12,9 +12,7 @@ function Timeline() {
       <div className="items-container">
         <h1>Career Goals & ECE Roadmap</h1>
         <p className="roadmap-description" style={{textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px auto'}}>
-          My long-term career aspiration is to lead systems integration for advanced autonomous robotics.
-          Rather than focusing strictly on traditional circuit design, my roadmap is heavily tailored toward
-          mechatronics—blending mechanical structures, custom PCBs, and intelligent control software.
+          My long-term goal is to lead systems integration for advanced autonomous robotics. My roadmap and timeline are built around mechatronics, where I get to do fun work blending mechanical structures, custom PCBs, and intelligent control software.
         </p>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -28,7 +26,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Robotics Systems Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">Industry Focus</h4>
             <p>
-              Lead the design and deployment of autonomous systems, managing the full mechatronic lifecycle from sensor integration to high-level pathfinding logic in aerospace or consumer robotics.
+              Lead the design and deployment of autonomous systems, managing sensor integration or high-level pathfinding logic in aerospace or consumer robotics.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -40,7 +38,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Mechatronics / Autonomy Internship</h3>
             <h4 className="vertical-timeline-element-subtitle">Industry Experience</h4>
             <p>
-              Secure internships focused on autonomous navigation or mechatronic hardware design. Steps to achieve this include completing advanced ECE thread coursework in Robotics and building out my portfolio with competitive BattleBots iterations.
+              Land internships focused on mechatronic hardware design. My plan to get there includes finishing advanced ECE thread coursework in Robotics and building out my portfolio with competitive BattleBots and more VIP work.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -52,7 +50,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Undergraduate Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">VIP: Mechatronics and Motivation</h4>
             <p>
-              Currently expanding my foundational skills by designing rigid-flex PCBs for wearable haptic devices. This role bridges the gap between my CAD experience and electrical engineering coursework.
+              Currently building my foundational skills by designing rigid-flex PCBs (stiffener/non stiffener) for wearable haptic devices in a ring form-factor. This role connects my CAD background directly to my electrical engineering coursework. (Also my first PCB design!)
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
@@ -64,7 +62,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Engineering Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Corning Incorporated</h4>
             <p>
-              Built early professional engineering foundations by assembling Schlieren imaging optics and analyzing spray distribution hotspots, giving me a deep appreciation for hardware testing and data visualization.
+              Gained early professional experience assembling Schlieren imaging optics and analyzing spray distribution hotspots. It gave me a real appreciation for hardware testing and data visualization. 
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
