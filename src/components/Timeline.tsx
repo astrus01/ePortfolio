@@ -62,7 +62,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Engineering Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Corning Incorporated</h4>
             <p>
-              Gained early professional experience assembling Schlieren imaging optics and analyzing spray distribution hotspots. It gave me a real appreciation for hardware testing and data visualization. 
+              Gained early professional experience assembling Schlieren imaging optics and analyzing spray distribution hotspots. It gave me a real appreciation for hardware testing and data visualization.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

@@ -39,7 +39,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faMicrochip} size="3x"/>
                     <h3>Hardware & PCB Design</h3>
-                    <p>I have hands-on experience designing compact, rigid-flex printed circuit boards for wearable technology. This includes managing component footprints and optimizing trace routing for space-constrained mechatronic applications.</p>
+                    <p>I have experience designing compact, rigid-flex printed circuit boards (PCB) for wearable technology, specifically for a ring, in Altium Designer. I have had to manage component footprints and optimize trace routing for really small constraints for mechatronic applications.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Core Skills:</span>
                         {labelsFirst.map((label, index) => (
@@ -51,7 +51,7 @@ function Expertise() {
                 <div className="skill">
                     <FontAwesomeIcon icon={faRobot} size="3x"/>
                     <h3>CAD & Prototyping</h3>
-                    <p>I'm comfortable with 3D modeling for combat robotics and other projects, and I regularly use 3D printers to rapidly iterate on mechanical assemblies and weapon systems.</p>
+                    <p>I am comfortable with 3D modeling in the context of combat robotics and other applications, and I have utilized 3D printers to rapidly iterate designs, even in mechanical assemblies and weapon systems.</p>
                     <div className="flex-chips">
                         <span className="chip-title">Core Skills:</span>
                         {labelsSecond.map((label, index) => (
